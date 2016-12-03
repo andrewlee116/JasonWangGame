@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultText: UILabel!
     var get = Int(arc4random_uniform(51))
     var scorez = 0
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         GetNumber.text = String(get)
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 
     @IBAction func Slider(sender: UISlider) {
         var value = Int(slideinslideout.value)
-        
+
         if(value == get){
             scorez+=5
             Score.text = String(scorez)
@@ -44,13 +44,12 @@ class ViewController: UIViewController {
             GetNumber.text = String(get)
             resultText.text = String("You didn't get it... -1 point")
         }
-        
+
         if(scorez >= 10)
-        {
+        { 
             backgroundImage.image = UIImage(named:"JASONWANG")
             resultText.text = String("You win")
         }
     }
 
 }
-
