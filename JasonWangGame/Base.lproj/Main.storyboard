@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JasonWangGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="VEd-l7-6ST">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="a4x-6f-ON7">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Jason Wang Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npg-d0-q1v" userLabel="Jason Wang Game">
+                                        <rect key="frame" x="68" y="0.0" width="207" height="129.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slider goes from 0 to 50. Get the number below! Game ends when you get 10 points!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mrs-jU-e2f">
+                                        <rect key="frame" x="8.5" y="129.5" width="326.5" height="129.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="326.5" id="7wg-2v-4ZY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="11v-bc-vPI" userLabel="Get: Number Stack View">
+                                        <rect key="frame" x="132" y="259" width="79" height="129"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get: " textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqo-MK-Udu">
+                                                <rect key="frame" x="0.0" y="0.0" width="61" height="129"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbQ-eC-FSY">
+                                                <rect key="frame" x="61" y="0.0" width="18" height="129"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="vbQ-eC-FSY" firstAttribute="centerY" secondItem="11v-bc-vPI" secondAttribute="centerY" id="Hlp-Cv-lCJ"/>
+                                            <constraint firstItem="Iqo-MK-Udu" firstAttribute="centerY" secondItem="11v-bc-vPI" secondAttribute="centerY" id="ejS-ut-hRC"/>
+                                        </constraints>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="0iV-0D-Hio">
+                                        <rect key="frame" x="-2" y="388" width="347" height="130.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="KVX-BJ-y4U"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="SliderWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B73-HB-aKS"/>
+                                        </connections>
+                                    </slider>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vw7-KS-ymR" userLabel="Score Stack View">
+                                        <rect key="frame" x="118" y="517.5" width="107" height="129.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryd-Bo-RnJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="89" height="129.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4y3-zD-atx">
+                                                <rect key="frame" x="89" y="0.0" width="18" height="129.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="a4x-6f-ON7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3qr-qU-MdI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VEd-l7-6ST" secondAttribute="bottom" id="KXS-mP-Ccq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a4x-6f-ON7" secondAttribute="trailing" id="MrE-Qw-RL9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a4x-6f-ON7" secondAttribute="bottom" id="bdI-ff-mZ4"/>
+                            <constraint firstItem="a4x-6f-ON7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hOs-NG-tsi"/>
+                            <constraint firstItem="VEd-l7-6ST" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="htd-0Z-O6X"/>
+                            <constraint firstAttribute="trailing" secondItem="VEd-l7-6ST" secondAttribute="trailing" id="ooN-1b-fiz"/>
+                            <constraint firstItem="VEd-l7-6ST" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="szr-5B-qPj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="GetNumber" destination="vbQ-eC-FSY" id="KbM-k7-QfA"/>
+                        <outlet property="Score" destination="4y3-zD-atx" id="Fk5-72-ZCj"/>
+                        <outlet property="backgroundImage" destination="VEd-l7-6ST" id="Xh6-FX-Lik"/>
+                        <outlet property="resultText" destination="Mrs-jU-e2f" id="xJC-ZI-CvG"/>
+                        <outlet property="slideinslideout" destination="0iV-0D-Hio" id="P1d-4j-9cD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="667" height="622"/>
+    </resources>
+</document>
